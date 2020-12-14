@@ -1,0 +1,120 @@
+<html>
+    <style>
+        /*清除浮动公共类名*/
+        .clearfix::after{
+            content: '';
+            display: inline-block;
+            clear: both;
+            overflow: hidden;
+            visibility: hidden;
+            height: 0px;
+        }
+            /* 基础样式 */
+            /* 顶部样式 start */
+        header{
+            background-color: #333333;
+            position: fixed;/*固定定位*/
+            top: 0; /*固定到顶部*/
+            width: 100px;
+            z-index: 10000;/*层叠中最上层*/
+            min-width: 1179px;
+        }
+        header .wrap{
+            max-width: 1170px;
+            margin: 0 auto;/*水平居中*/
+        }
+        header .logo{
+            float: left;
+            height: 35px;
+            width: 130px;
+            background: url('images/logo.png') no-repeat #d43d3d center;/*logo背景 图片 背景色 图片居中对齐*/
+            background-size: 87px 21PX ;/*背景图片大小*/
+        }
+        header .logo{
+            float: left;
+            margin-left: 20px;
+        }
+        header a{
+            font-size: 14px;
+            color: #fff;
+            height: 35px;
+            line-height: 35px;
+            display: inline-block;/*行块级元素*/
+
+        }
+        /* header li a:hover{ 
+             color: #d92f29; 
+        }*/
+        header li .more{
+            position: relative;
+            padding-right: 12px;
+        }
+        /*伪类添加更多向下箭头图片*/
+        header .more：：after{
+            content: " ";
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            top: 15px;
+            width: 12px;
+            height: 5px;
+            background: url("images/down_arrow.png") no-repeat center center;
+        }
+        /* 单独处理鼠标经过时字体颜色及更换背景图片 */
+        header .more:hover a{
+            color: #d92f29;
+        }
+        header .more:hover::after{
+            background: url("imager/down_red_arrow.png") no-repeat center center;
+        }
+        header .register{
+            float: left;
+            line-height: 35px;
+            height: 35px;
+        }
+        header .register a{
+            margin-left: 18px;
+            font-size: 12px;
+        }
+        header .register a:hover{
+            text-decoration: underline;
+        }
+        header .register .version{
+            background: url('imager/version.png') no-repeat;
+            background-size: cover;
+            display: inline-block;
+            position: relative;
+             cursor: pointer; /*鼠标移动到该元素上的样式*/
+        }
+
+
+
+
+
+    </style>
+    <header>
+        
+        <div class="logo" href="#"></div>
+        <nav>
+            <ul>
+                <li><a href="https://360kuai.com/">首页</a></li>
+                <li><a href="https://360kuai.com/">新时代</a></li>
+                <li><a href="https://360kuai.com/">辟谣</a></li>
+                <li><a href="https://360kuai.com/">图片</a></li>
+                <li><a href="">汽车</a></li>
+                <li><a href="">房产</a></li>
+                <li><a href="">科技</a></li>
+                <li><a href="">财经</a></li>
+                <li><a href="">体育</a></li>
+                <li><a href="">旅游</a></li>
+                <li class="more"><a href="https://360kuai.com/">更多</a></li>
+                </a></li>
+            </ul>
+        </nav>
+        <div class="register">
+            <a href="login.html">登录</a>
+            <a href="register.html" target="_blank">注册</a>
+            <span class="version"></span>
+        </div>
+    </header>
+</html>
