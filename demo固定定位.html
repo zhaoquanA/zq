@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style type="text/css">
+            header{
+                border: 2px solid #ca9157;
+                height: 100px;
+                width: 400px;
+            }
+            section{
+                border: 2px solid #FF0000;
+                height: 200px;
+                width: 200px;
+                position: fixed;/*固定定位*/
+                top: 20px;/*当前块距离浏览器窗口顶部*/
+                left: 40px;/*当前块距离浏览器窗口左边缘的距离*/
+            }
+            footer{
+                border: 2px solid #0000FF;
+                height: 100px;
+               width: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>固定定位</h1> 
+
+        </header>
+        <section>
+            <p>固定定位是相对于浏览器窗口进行定位，不管页面中文档内容如何滚动，
+                盒子位置始终相对于浏览器窗口展示。原位置不再保留</p>
+        </section>
+        <footer>
+            <p>&copy;版权所有</p>
+        </footer>
+    </body>
+</html>
