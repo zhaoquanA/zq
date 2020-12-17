@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+            let array01 = new Array();   //只创建，但是没有初始值
+            
+            let array02 = new Array(1,2,3,4,5,6,7,8,9);   //创建了一个数组，并且给定初始值
+
+            let Array03 = new Array("二仙桥" ， 18 ， true , null);  //创建一个数组
+
+            /*
+
+              字面量
+            */
+
+            let array04 = [];   //创建一个简单数组，只创建，不给定初始值
+            let array05 = [1,2,3,4,5,6,7,8,9];  //字面量创建数组，并给定初始值
+            let array06 = ["二仙桥",18,true,null]; //初始值类型可以不同
+
+            //查看数组
+
+            console.log(array02);
+            console.log(array05);
+
+            //数组长度
+            console.log(array02.length); //9
+            console.log(array05.length); //9
+
+            
+            console.log(typeof(array02));  //object 对象类型
+            console.log(typeof(array05));  //object 对象类型
+
+            //数组遍历
+            for(let i =0 ; i< array02.length ;i++){
+                console.log("array02["+ i +"]="+ array02[i]);
+            }
+
+            console.log("最后一个元素 " + array02[array02.length-1]); //最后一个元素
+            console.log("最后一个元素 " + array02[array02.length-1]); //最后一个元素
+
+        </script>
+
+
+    </head>
+
+    <body>
+
+
+    </body>
+</html>
