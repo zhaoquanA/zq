@@ -1,0 +1,56 @@
+<head> 
+      <style type="text/css"> 
+       div{ 
+        width: 100px; 
+        height: 100px; 
+        margin: 0 auto;/**盒子浏览器居中*/ 
+        border: 1px solid green; 
+        background: pink; 
+       } 
+       .translate{ /*元素左移400px，向下移150px*/ 
+        transform:translate(400px,10px); 
+        -ms-transform:translate(400px,10px); /* IE 9 */ 
+        -webkit-transform:translate(400px,10px); /* Safari and Chrome */ 
+       } 
+       .rotate{ /* 旋转div元素30° */ 
+        transform:rotate(30deg); 
+        -ms-transform:rotate(30deg); /* IE 9 */ 
+        -webkit-transform:rotate(30deg); /* Safari and Chrome */ 
+       } 
+       .scale{ /*宽度是原始大小的两倍，高度是原始大小的三倍。  规模*/ 
+        -ms-transform: scale(2,3); /* IE 9 */ 
+        -webkit-transform: scale(2,3); /* Safari */ 
+        transform: scale(2,3); /* 标准语法 */ 
+       } 
+       .skew{ /* div元素在X轴倾斜30°，Y轴倾斜20°  偏离; 歪斜 */ 
+        transform:skew(30deg,20deg); 
+        -ms-transform:skew(30deg,20deg); /* IE 9 */ 
+        -webkit-transform:skew(30deg,20deg); /* Safari and Chrome */ 
+       } 
+       .matrix{/* 旋转div元素30°   矩阵*/ 
+        transform:matrix(0.866,0.5,-0.5,0.866,0,0); 
+        -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */ 
+        -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */  
+       } 
+      </style> 
+    <body> 
+     <div> 
+      这是一个的div盒子 
+     </div> 
+     <div class="translate"> 
+      这是一个translate的div盒子 
+     </div> 
+     <div class="rotate"> 
+      这是一个rotate的div盒子 
+     </div> 
+     <div class="scale"> 
+      这是一个scale的div盒子 
+     </div> 
+     <div class="skew"> 
+      这是一个skew的div盒子 
+     </div> 
+     <div class="matrix"> 
+      这是一个matrix的div盒子 
+     </div> 
+    </body> 
+    
