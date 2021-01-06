@@ -1,23 +1,5 @@
 <html>
     <head>
-        <script>
-            /*
-               1、规则
-                   1、当全局变量和局部变量同时存在，局部优先级比全局变量高，优先使用局部变量
-                   2、当使用变量在定义变量之前，变量提升
-
-            */
-
-            var name = "姜文";
-
-            function Fun01(){
-                console.log(name);  //undefined
-                var name = "张麻子";
-                console.log(name);  //张麻子
-            }
-
-            console.log(name);  //姜文
-        </script>
 
 
     </head>
@@ -26,4 +8,21 @@
 
 
     </body>
+
+    <script>
+        /*
+            window对象  navigator
+        */
+        console.log(window.navigator.appName);   //Netscape  网景
+        console.log(window.navigator.platform);  //Win32
+        console.log(window.navigator.cookieEnabled);  //true
+        /*
+        Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3947.100 Safari/537.36
+        */
+        console.log(window.navigator.userAgent);
+        /*
+        5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3947.100 Safari/537.36
+        */
+        console.log(window.navigator.appVersion);
+    </script>
 </html>
