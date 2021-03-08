@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <div id="box">
+             我是一个div  点我
+        </div>
+
+
+    </body>
+
+    <script>
+        /*
+          onload  当页面加载完成触发的事件
+        */
+
+
+        window.onload = function Fun01() {
+            let box = document.getElementById("box");
+            box.onclick = function() {
+                console.log("我被点击了");
+            }
+        }
+    </script>
+</html>
