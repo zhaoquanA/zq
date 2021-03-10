@@ -1,0 +1,37 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <div id="box">
+            <select name="menu" id="menu">
+                <option value="">请选择</option>
+                <option value="red">红色</option>
+                <option value="green">绿色</option>
+                <option value="blue">蓝色</option>
+                <option value="yellow">黄色</option>
+                <option value="gray">灰色</option>
+
+            </select>
+
+        </div>
+    </body>
+
+    <script>
+        var menu = document.getElementById("menu");
+        menu.onchange = function(){  // 当内容发生改变的时候，触发以下行为
+            var bgc = this.value;  //  当前选中的对象
+
+
+            // var bg = menu.options[menu.selectedIndex].value;
+            // console.log("bg:" + bg)
+            // console.log(bgc);
+            if (bgc == ""){
+
+            }else{
+                menu.style.backgroundColor = bgc;
+            }
+        }
+    </script>
+</html>
