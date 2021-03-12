@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <p class="text">
+            你还可以输入
+            <span> <em id="count">30</em>/30</span>
+
+        </p>
+        <div class="input">
+            <textarea name="text" id="text" cols="70" rows="10"></textarea>
+
+        </div>
+
+
+    </body>
+    <script>
+        var text = document.getElementById("text");
+        var count = document.getElementById("count");
+        var total = 30;
+        document.onkeyup = function (ev){ // 当键盘弹起的时候开始统计输入多少字
+        var len = text.value.length;  // 求输入框的内容的长度
+        var allowLen = total - len ;  // 总长度 - 已经输入的长度 = 剩下可输入的长度
+        count.innerHTML = allowLen;  // 把求得的结果展示在上方统计显示标签上ian
+
+        }
+    </script>
+    
+</html>
