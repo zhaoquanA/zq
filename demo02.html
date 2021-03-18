@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+
+
+    </body>
+
+    <script>
+        document.cookie = "name=tom";
+        document.cookie = "age=18";
+        var date = new Date(new Date().getTime() + 10* 60 * 1000);
+        document.cookie = "year=2020;expires=" + date.toGMTString();
+
+
+        //解析
+        var get_cookie = document.cookie;
+        console.log(get_cookie);
+
+        function jixi (yuancookie , chaxun ) {
+            var arrCookie = yuancookie.split(";");
+            for (var i =0 ; i < arrCookie.length ; i ++){
+                console.log(arrCookie[i]);
+                var arrkeyandavalue = arrCookie[i].split("=");
+                if ( chaxun == arrkeyandavalue[0].trim()) {
+                    result = arrkeyandavalue[1];
+                    break;
+            }
+        }
+         
+        }
+
+        var res = jixi(get_cookie , "name");
+        console.log(res);
+    </script>
+</html>
