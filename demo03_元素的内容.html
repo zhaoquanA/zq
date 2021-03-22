@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <div id="box">
+            这是盒子
+            <span>这是span中的文字</span>
+
+        </div>
+
+
+    </body>
+
+    <script>
+        var get_box = document.getElementById("box");
+        console.log(get_box.innerHTML);  
+        //  这是盒子 <span>这是span中的文字</span>
+        console.log(get_box.outerHTML);
+        /*
+        <div id="box">
+            <span>这是span中的文字</span>
+
+        </div>
+        */
+        console.log(get_box.innerText);
+        // 这是盒子 这是span中的文字
+        console.log(get_box.outerText);
+        // 这是盒子 这是span中的文字
+    </script>
+</html>
