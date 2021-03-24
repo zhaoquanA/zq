@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #parent{
+                width: 500px; height: 500px;
+                margin: 100px auto;
+                background-color: red;
+                position: relative;
+                overflow: hidden;
+            }
+            #child{
+                width: 300px;
+                height: 300px;
+                background-color: green;
+                margin: 50px 90px;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <div id="parent">
+            <div id="child">
+
+            </div>
+
+        </div>
+
+
+    </body>
+    <script>
+        var get_child = document.getElementById("child");
+        console.log(get_child.offsetWidth);   //  offset  偏移量
+        console.log(get_child.offsetHeight);
+        console.log(get_child.offsetTop);
+        console.log(get_child.offsetLeft);  // */
+
+        console.log(document.body.clientWidth);  //用户端可见宽度
+        console.log(document.body.clientHeight); //没有边线  用户端可见高度
+        console.log(document.body.offsetWidth);  //包括边线  用户端可见高度
+        console.log(document.body.offsetHeight);  //包括边线  用户端可见高度
+        console.log(document.body.scrollHeight);  //正文宽度
+        console.log(document.body.scrollWidth);  //正文高度
+        console.log(document.body.scrollTop);  //网页被蜷曲的高度
+        console.log(document.body.scrollLeft);  //网页被卷曲的左侧
+        console.log(window.screenTop);
+        console.log(window.screenLeft);
+        console.log(window.screen.width);
+        console.log(window.screen.height);
+        console.log(window.screen.availWidth);
+        console.log(window.screen.availHeight);
+        
+    </script>
+</html>
