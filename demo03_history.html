@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <button onclick="goBack()">返回上一级</button>
+        <button onclick="goBack02()">返回上一级</button>
+        <button onclick="onceAgain()">再跳一次</button>
+
+
+    </body>
+
+    <script>
+        function goBack(){
+            history.back();  // 回到上一个页面
+        }
+
+        function goBack02(){
+            history.go(-1);  //回到上一次访问的页面  -1  -2
+        }
+
+        function onceAgain(){
+            window.location.href ="demo03_back.html"
+        }
+    </script>
+</html>
