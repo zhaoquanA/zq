@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script>
+
+            /*
+              function 函数，功能，行为，动作
+              Fun01  函数名
+              () 里面存放参数，没写就是空参数     (name,age)     name和age 都是参数(形式参数)
+              {} 函数体
+
+            */
+            //  无参函数
+            function Fun01(){
+                console.log("啦啦啦");
+            }
+
+            console.log(typeof(Fun01));  //function
+
+            Fun01();      //函数的调用   函数名后面加()
+
+            //   有参数的函数
+            function Fun02(name){
+                console.log(name+"是个狠人")；
+            }
+            Fun02("左冷禅");
+            function Fun02(name , age){
+                console.log(name+"是个狠人"+age+"老同志")
+            }
+            Fun03("东方不败",69);  //函数调用
+
+            //带返回值的函数
+            function Fun04(a,b){
+                let c =a + b ;
+                return c;
+            }
+            var reslut = Fun04(1,4);
+            console.log(reslut);
+
+
+        </script>
+
+
+
+
+
+    </head>
+
+
+
+
+    <body>
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
