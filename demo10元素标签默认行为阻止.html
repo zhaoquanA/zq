@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <div>
+            <p id="box"> <a href="http://www.baidu.com">baidu</p>
+        </div>
+
+
+    </body>
+    <script>
+        var as = document.getElementByIdName("a")
+        as[0].onlick = function(event){
+
+            //  event.preventDefault();
+
+            console.log("跳转行为被阻止了");
+            return false;
+        }
+        
+    </script>
+</html>
