@@ -1,29 +1,53 @@
 ```java
-create database Two20210603 default charset=utf8;
-use Two20210603;
+create database school; -- 创建数据库
 
-create table student(
- `name` varchar(10),
- sex char,
+show databases; -- 显示数据库
+
+use school;  -- 使用数据库
+ -- 创建学生信息表 
+create table studentInfo1 (
+ id int primary key , -- 主键
+ name varchar(10),
  age int,
- address varchar(100)
+ sex char,
+ province char,
+ primary key (id,`name`) -- 联合主键
 );
 
-insert into student values ("王小小","男",20,"许昌"),
-("王大","男",18,"许昌"),("王二","男",20,"许昌"),("王八","男",20,"许昌"),
-("吴用","男",18,"沧州"),("吴有","男"18,"曹县"),("吴汉","男",38,"安阳")
-;
-select * from student;
+show tables; -- 显示表格
+ 
+desc studentInfo; -- 描述表格具体信息
 
- -- 模糊查询  like
- # % 匹配多个字符  _匹配一个字符
-select *from student where `name` like "王%";
-select *from student where `name` like "王_";
-insert into student values ("梅超风",'女',38,'江南'),("梅用",'男',35,'南京'),
-("马超",'男',25,"西凉")
-;
-select *from student where `name` like "%用";
-select *from student where `name` like "%"; # 匹配所有的数据
-select *from student where `name` like "_超_%";
+create table studentInfo2 (
+ id int primary key , -- 主键
+ name varchar(10),
+ age int,
+ sex char,
+ province char,
+ primary key (id,`name`) -- 联合主题
+);
+ --创建表格
+create table book (
+ id int auto_increment primary key,  -- 自动增长id
+ name varchar(20),
+ author char(4)
+);
+alter table book rename books; -- 修改表结构 改名为books
+ -- 向表格中插入数据
+insert into book(`name`,author)values ('钢铁是怎样炼成的','保尔');
+insert into book(`name`,author)values ('钢铁是怎样炼成的','保尔');
+insert into book(`name`,author)values ('钢铁是怎样炼成的','保尔');
+insert into book(`name`,author)values ('钢铁是怎样炼成的','保尔');
+
+select * from book;  -- 查询表格中的全部数据
+
+create table address1(
+ province varchar(10),
+ shi varchar(10),
+ xian varchar(10),
+ cun varchar(10),
+ constraint waijian foreign key (province) references studentInfo(province) -- 外键
+);
+
 ```
 
